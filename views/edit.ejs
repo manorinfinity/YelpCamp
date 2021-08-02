@@ -1,0 +1,25 @@
+
+<%include ./partials/header%>
+<div class="container-fluid text-center">
+<h1>Edit Campground</h1>
+<h6><%=edit.title%><%=edit._id%></h1>
+</div>
+
+<form style="width:40rem;" id="form" action="/campgrounds/<%=edit._id%>?_method=PUT" method="POST">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Post Title</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="campground[title]" value="<%=edit.title%>">
+  </div>
+   <div class="form-group">
+    <label for="exampleFormControlTextarea1">Description</label>
+    <textarea class="form-control" name="campground[body]" id="exampleFormControlTextarea1" rows="3"><%=edit.body%></textarea>
+  </div>
+    <div class="form-group">
+    <label for="exampleInputEmail1">Image Url</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="campground[image]" value=<%=edit.image%>>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>
+
+<%include ./partials/footer%>

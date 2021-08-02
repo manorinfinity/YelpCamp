@@ -1,0 +1,22 @@
+
+<%include ./partials/header%>
+<div class="container-fluid text-center">
+<h1>Register For YelpCamp</h1>
+<h6>and Explore the world of Campgrounds</h6>
+</div>
+
+<form style="width:40rem;" id="form" action="/campgrounds/signup" method="POST">
+	  <div class="form-group">
+	    <label for="formGroupExampleInput">Username</label>
+	    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="username" name="username">
+	  </div>
+	  <div class="form-group">
+	    <label for="exampleInputPassword1">Password</label>
+	    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password" >
+	  </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>
+
+<%include ./partials/footer%>

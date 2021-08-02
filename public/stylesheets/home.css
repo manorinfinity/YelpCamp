@@ -1,0 +1,70 @@
+body{
+	background-color: black;
+}
+#landing{
+	z-index: 1;
+	position: relative;
+	top: 45vh; 
+	text-align:center;
+	color: white;
+}
+#slideshow{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	z-index: 0;
+	top: 0;
+	left: 0;
+	list-style: none;
+}
+#slideshow li{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	z-index: 0;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	animation: imageAnimation 24s linear infinite;
+}
+#slideshow li:nth-child(1){
+	background-image: url("https://cdn.arstechnica.net/wp-content/uploads/2018/11/8.png");
+ animation-delay: 0s;
+}
+#slideshow li:nth-child(2){
+	background-image: url("https://static.gamespot.com/uploads/original/1578/15789737/3315438-hitman.jpg");
+animation-delay: 6s;	
+}
+#slideshow li:nth-child(3){
+	background-image: url("https://cdn1.thr.com/sites/default/files/imagecache/landscape_928x523/2011/05/hitman-absolution-2011-a-l.jpg");
+	animation-delay: 12s;
+}
+#slideshow li:nth-child(4){
+	background-image: url("https://psmedia.playstation.com/is/image/psmedia/hitman-listing-thumb-01-ps4-eu-23oct15?$Icon$");
+	animation-delay: 18s;
+}
+@keyframes imageAnimation{
+0%{
+	opacity: 0;
+	animation-timing-function: ease-in;
+}
+10%{
+	opacity: 1;
+	animation-timing-function: ease-out;
+
+}
+20%{
+	opacity: 1;
+
+}
+30%{
+	opacity: 0;
+}
+}

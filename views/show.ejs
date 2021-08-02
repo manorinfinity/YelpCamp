@@ -1,0 +1,37 @@
+<% include ./partials/header %>
+<div id="campshow" >
+<img class="img-thumbnail p-0 mb-4 " src="<%=found.image%>">
+<h1 class="text-center"><%= found.title%></h1>
+<br>
+<h6><%= found.body%></h6>
+<br>
+<a class="btn btn-info" href="/campgrounds/<%=found._id%>/edit"> Edit Campground </a>
+<br>
+<br>
+<a class="btn btn-primary" href="/campgrounds/<%=found._id%>/comment/new"> Add Comment </a>
+
+<br>
+<br>
+
+
+<form action="/campgrounds/<%=found._id%>?_method=DELETE" method="POST">
+<button class="btn btn-danger" type=submit> Delete Campground </button>
+</form>
+
+</div>
+<div id="campshow" class="container">
+<%found.comments.forEach(function(comment){%>
+	<h5><%=comment.author.username%> Says</h5>
+	<p><%=comment.body%></p>
+	<a class="btn btn-info" href="/campgrounds/<%=found._id%>/comment/<%=comment._id%>/edit"> Edit Comment </a>
+	<br>
+	<br>
+	<form action="/campgrounds/<%=found._id%>/comment/<%=comment._id%>/?_method=DELETE" method="POST">
+	<button class="btn btn-danger" type=submit> Delete Comment </button>
+	</form>
+
+
+<%});%>
+</div>
+
+<% include ./partials/footer %>

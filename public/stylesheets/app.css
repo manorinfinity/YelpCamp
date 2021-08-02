@@ -1,0 +1,23 @@
+#form{
+	margin: 0 auto;
+	padding-top: 2rem;
+}
+.container-fluid{
+	background-color: black;
+	color: white;
+	padding:8px 8px;
+}
+#readmore{
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}
+#campshow{
+	height: auto;
+	width: 52rem;
+	margin: 0 20rem;
+	border: 1px solid grey;
+	padding: 2.5rem;	
+
+}
